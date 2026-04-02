@@ -36,3 +36,33 @@ The Logistic Regression model identified three primary risk factors with high st
 3.  **Pregnancy History:** Statistically significant in this demographic study.
 
 **Insights for Public Health:** While clinical variables like `Insulin` and `Triceps Skinfold` are often measured, this model suggests that for rapid screening, focusing on **Glucose** and **BMI** provides the most predictive "bang for your buck" in resource-limited settings.
+
+
+# 🩺 Epidemiological Study: Diabetes Risk Factor Analysis
+**A Diagnostic Data Science Project in R**
+
+## **Executive Summary**
+This project conducts a diagnostic analysis of the **Pima Indians Diabetes Database** to identify the most significant physiological predictors of diabetes mellitus. Using **R** and the **Tidyverse** ecosystem, I developed a predictive model that achieves a diagnostic accuracy of **77.77%**.
+
+### **Strategic Insights:**
+* **Data Integrity & Biological Auditing:** Identified "hidden missingness" in clinical records where physiologically impossible values (e.g., 0 BMI, 0 Glucose) were present. I utilized **Median Imputation** to recover 374 missing insulin records and 227 skinfold thickness records, preserving the dataset's statistical power.
+* **Primary Risk Drivers:** Logistic Regression confirmed that **Plasma Glucose** ($p < 2e-16$) and **BMI** ($p = 2.39e-06$) are the most critical predictors of disease onset. 
+* **Clinical Optimization:** Analysis revealed that while variables like `Insulin` and `Triceps Skinfold` are traditional markers, they provided diminishing marginal utility in this specific risk model compared to the "Big Two" (Glucose and BMI).
+
+### **Technical Stack:**
+* **Language:** R
+* **Libraries:** `tidyverse` (Wrangling), `mlbench` (Dataset), `corrplot` (Correlation), `broom` (Tidying), `caret` (Evaluation).
+* **Methodology:** Z-score Standardization, Logistic Regression, Coefficient Risk Profiling.
+
+---
+
+## **Key Visualizations**
+*(Note: Upload your exported R plots to your GitHub repository and link them here)*
+
+### **1. Glucose Risk Stratification**
+Shows the clear separation in glucose levels between healthy and diabetic populations.
+![Glucose Boxplot](boxplot.png)
+
+### **2. Coefficient Impact Map**
+Visualizes which clinical factors "pull" most strongly toward a positive diagnosis.
+![Coefficient Plot](coeffficientplot.png)
